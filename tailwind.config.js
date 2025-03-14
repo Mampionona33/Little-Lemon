@@ -13,7 +13,7 @@ export default {
         },
       },
       animation: {
-        scaleIn: "scaleIn 0.5s ease-in-out forwards",
+        scaleIn: "scaleIn 0.4s ease-in-out forwards",
       },
     },
   },
