@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: [path.resolve(__dirname, "./tests/setup.ts")],
-    name: "My Test",
+    name: "vitest-react",
     environment: "jsdom",
     env: {
       IS_REACT_ACT_ENVIRONMENT: "true",
