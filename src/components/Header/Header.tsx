@@ -16,15 +16,25 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-around items-center p-4 bg-slate-100">
-      <div className="flex items-center ">
+    <header className="flex justify-around items-center p-4">
+      <Link to="/" className="flex items-center ">
         <img src={logo} alt="logo" className="w-48" />
-      </div>
+      </Link>
       <nav>
         <ul className="flex gap-2 space-x-4 font-semibold">
           {links.map((link, index) => (
-            <li key={index}>
-              <Link to={link.href}>{link.label}</Link>
+            <li
+              key={index}
+              className={`relative inline-block after:content-[''] 
+                after:absolute after:bottom-0 after:-translate-x-1/2 
+                after:w-0 after:h-[3px] after:rounded-full after:bg-primary 
+                after:opacity-0 after:transition-all after:duration-300 
+                after:ease-in-out hover:after:w-full hover:after:opacity-100 
+                hover:after:animate-scaleIn`}
+            >
+              <Link to={link.href} className="block py-2">
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>
