@@ -16,12 +16,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-around items-center ">
-      <div className="flex items-center">
+    <header className="flex justify-around items-center p-4">
+      <div className="flex items-center ">
         <img src={logo} alt="logo" className="w-48" />
       </div>
       <nav>
-        <ul className="flex gap-2 space-x-4">
+        <ul className="flex gap-2 space-x-4 font-semibold">
           {links.map((link, index) => (
             <li key={index}>
               <Link to={link.href}>{link.label}</Link>
