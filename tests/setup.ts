@@ -1,4 +1,9 @@
-import "@testing-library/jest-dom"; // Étend les assertions avec jest-dom
+/**
+ * Étend les assertions avec jest-dom.
+ * La version ^5.16.5 a été utilisée pour résoudre un problème de compatibilité avec Vitest.
+ */
+import "@testing-library/jest-dom";
+
 import { afterAll, afterEach, beforeAll, vi } from "vitest";
 import { server } from "./mock/server";
 

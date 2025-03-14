@@ -1,16 +1,15 @@
-/// <reference types="vitest/config" />
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tsconfigPaths()],
   test: {
-    // ... Specify options here.
-    name: "My Test",
-    root: "./src",
-    environment: "jsdom",
     globals: true,
-    setupFiles: ["./tests/setup.ts"],
+    setupFiles: [path.resolve(__dirname, "./tests/setup.ts")],
+    name: "My Test",
+    environment: "jsdom",
     env: {
       IS_REACT_ACT_ENVIRONMENT: "true",
     },

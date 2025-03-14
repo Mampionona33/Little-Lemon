@@ -1,7 +1,10 @@
-import {  describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
+import Home from "./Home";
 
 describe("Home", () => {
   it("should render", () => {
-    expect(true).toBe(true);
+    const { container } = render(<Home />);
+    expect(container).toBeInTheDocument();
   });
 });
