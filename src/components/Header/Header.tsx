@@ -16,7 +16,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-around items-center p-4">
+    <header className="flex justify-around items-center p-4 bg-slate-100">
       <div className="flex items-center ">
         <img src={logo} alt="logo" className="w-48" />
       </div>
