@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import About from "./About";
-import { render } from "@testing-library/react";
+import { render } from "../../../tests/test-utilities";
 
 describe("About", () => {
   it("should render", () => {
