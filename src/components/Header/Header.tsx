@@ -16,7 +16,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-around items-center p-4">
+    <header className="flex justify-around items-center p-4 bg-slate-50">
       <Link to="/" className="flex items-center ">
         <img src={logo} alt="logo" className="w-48" />
       </Link>
@@ -32,7 +32,7 @@ const Header = () => {
                 after:ease-in-out hover:after:w-full hover:after:opacity-100 
                 hover:after:animate-scaleIn`}
             >
-              <Link to={link.href} className="block py-2">
+              <Link to={link.href} className="block">
                 {link.label}
               </Link>
             </li>

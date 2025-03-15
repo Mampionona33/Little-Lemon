@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { render } from "@testing-library/react";
 import Home from "./Home";
+import { render } from "../../../tests/test-utilities";
 
 describe("Home", () => {
   it("should render", () => {

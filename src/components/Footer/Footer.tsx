@@ -46,7 +46,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="fixed flex flex-row bottom-0 w-full justify-around p-4 bg-slate-100">
+    <footer className="flex flex-row bottom-0 w-full justify-around p-4 bg-slate-50">
       <div className="flex justify-center items-center">
         <img src={footerLogo} alt="footer logo" className="w-16" />
       </div>
