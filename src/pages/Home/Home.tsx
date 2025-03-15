@@ -36,6 +36,23 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="flex pt-14 flex-col ">
+        <div className="flex flex-row items-center gap-4 justify-between p-28">
+          <h1 className="font-serif text-3xl">This weeks special!</h1>
+          <div>
+            <Link
+              to="/menu"
+              className={`
+              bg-secondary text-primary py-2 px-4 
+              rounded-md mt-4 cursor-pointer font-semibold 
+              hover:border-2 hover:border-secondary 
+              hover:bg-transparent hover:text-prymary`}
+            >
+              Online Menu
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
