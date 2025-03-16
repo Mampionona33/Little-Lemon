@@ -60,7 +60,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="">
       <section className="w-full min-h-96 bg-primary relative  xl:pt-14">
         <div className="flex flex-col justify-around gap-8 items-center p-8 md:flex-row  xl:absolute top-18 xl:items-start">
           <div className=" flex flex-col gap-4 px-8 xl:pl-28">

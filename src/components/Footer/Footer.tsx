@@ -46,7 +46,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col-reverse gap-4 md:flex-row bottom-0 w-full justify-around p-4 bg-slate-50">
+    <footer className="flex flex-col-reverse gap-4 md:flex-row bottom-0 w-full justify-around p-4 bg-slate-50 shadow-lg">
       <div className="flex justify-center items-center">
         <img src={footerLogo} alt="footer logo" className="w-16" />
       </div>
