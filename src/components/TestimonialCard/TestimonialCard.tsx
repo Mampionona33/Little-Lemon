@@ -48,7 +48,7 @@ const TestimonialCard = ({
   };
 
   return (
-    <div className="w-80 bg-primary p-4 rounded-lg shadow-lg flex flex-row items-center gap-4 md:flex-col">
+    <div className="md:w-80  bg-primary p-4 rounded-lg shadow-lg flex flex-row items-center gap-4 md:flex-col">
       <div className="flex justify-center min-w-[100px] min-h-[100px]">
         <img
           className="w-[100px] h-[100px] rounded-full"

@@ -88,14 +88,14 @@ const Home = () => {
             <img
               src={shuchi}
               alt="shuchi"
-              className="h-96 rounded-lg shadow-lg"
+              className="xl:h-96 h-[50vh] rounded-lg shadow-lg"
             />
           </div>
         </div>
       </section>
 
-      <section className="flex pt-14 flex-col ">
-        <div className="flex flex-col xl:flex-row items-center gap-4 justify-between p-28 pb-14">
+      <section className="flex xl:pt-14 flex-col ">
+        <div className="flex flex-col xl:flex-row items-center gap-4 justify-between p-20 pb-14">
           <h1 className="font-serif text-3xl">This weeks special!</h1>
           <div>
             <Link
@@ -133,9 +133,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col xl:flex-row items-center p-8">
+      <section className="flex flex-col md:flex-row items-center p-8">
         {/* Partie texte à gauche */}
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="md:w-1/2 flex flex-col gap-4">
           <h1 className="font-bold text-3xl text-primary">Our story</h1>
           <p className="text-lg font-semibold">
             Little Lemon is owned by two Italian brothers, Mario and Adrian, who
@@ -151,19 +151,19 @@ const Home = () => {
         </div>
 
         {/* Partie images à droite */}
-        <div className="w-1/2 flex justify-center relative">
-          <div className="xl:relative w-full min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4">
+        <div className="md:w-1/2 flex justify-center relative">
+          <div className="md:relative w-full md:min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4">
             {/* Première image */}
             <img
               src={mario_and_adrian_A}
               alt="mario_and_adrian_A"
-              className="w-full xl:w-80 h-96 object-cover shadow-lg rounded-lg xl:absolute xl:top-0 xl:left-20"
+              className="w-full md:w-72 h-96 object-cover shadow-lg rounded-lg md:absolute md:top-0 md:left-20"
             />
             {/* Deuxième image */}
             <img
               src={mario_and_adrian_B}
               alt="mario_and_adrian_B"
-              className="w-full xl:w-80 h-96 object-cover shadow-md rounded-lg xl:absolute xl:top-40 xl:right-10"
+              className="w-full md:w-72 h-96 object-cover shadow-md rounded-lg xl:absolute xl:top-40 xl:right-10"
             />
           </div>
         </div>

@@ -46,12 +46,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-row bottom-0 w-full justify-around p-4 bg-slate-50">
+    <footer className="flex flex-col-reverse gap-4 md:flex-row bottom-0 w-full justify-around p-4 bg-slate-50">
       <div className="flex justify-center items-center">
         <img src={footerLogo} alt="footer logo" className="w-16" />
       </div>
 
-      <div className="flex justify-between gap-4">
+      <div className="flex justify-between gap-4 flex-wrap">
         {footerSections.map((section, index) => (
           <div key={index} className="flex flex-col ">
             <h3 className="text-lg font-semibold mb-2">{section.title}</h3>

@@ -10,11 +10,11 @@ export interface MenuItem {
 
 const MenuCard = ({ item }: { item: MenuItem }) => {
   return (
-    <div className="flex flex-col gap-4 rounded-lg bg-slate-50 shadow-md justify-between w-min min-h-[40rem] ">
+    <div className="flex flex-col gap-4 rounded-lg bg-slate-50 shadow-md justify-between w-min min-h-[35rem] ">
       <img
         src={item.image}
         alt={item.title}
-        className="rounded-t-lg min-w-[25rem] "
+        className="rounded-t-lg min-w-80 "
       />
 
       <div className="flex flex-col gap-2 p-8 rounded-b-lg space-y-6 ">
