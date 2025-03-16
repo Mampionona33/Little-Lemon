@@ -4,6 +4,9 @@ import greek_salade from "../../assets/images/greek_salade.jpg";
 import bruchetta from "../../assets/images/bruchetta.jpg";
 import fish_barbecue_01 from "../../assets/images/fish_barbecue_01.jpg";
 import MenuCard, { MenuItem } from "../../components/MenuCard/MenuCard";
+import TestimonialCard, {
+  TestimonialProps,
+} from "../../components/TestimonialCard/TestimonialCard";
 
 const Home = () => {
   const menuItems: MenuItem[] = [
@@ -30,6 +33,27 @@ const Home = () => {
       price: 15,
       image: fish_barbecue_01,
       link: "/order/lemon-dessert",
+    },
+  ];
+
+  const testimonials: TestimonialProps[] = [
+    {
+      name: "John Doe",
+      text: "I had a great experience at Little Lemon. The food was delicious and the staff was friendly.",
+      rating: 4.5,
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      name: "Jane Doe",
+      text: "I had a great experience at Little Lemon. The food was delicious and the staff was friendly.",
+      rating: 3,
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      name: "John Doe",
+      text: "I had a great experience at Little Lemon. The food was delicious and the staff was friendly.",
+      rating: 5,
+      image: "https://picsum.photos/200/300",
     },
   ];
 
@@ -91,6 +115,20 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section>
+        <div className="flex flex-col items-center gap-4">
+          <h1 className="font-bold text-5xl text-primary ">Testimonials</h1>
+          <h3 className="text-3xl text-orange-500 font-semibold">
+            Read what our customers have to say
+          </h3>
+        </div>
+      </section>
+
+      <div className="flex flex-row justify-around gap-8 p-10">
+        {testimonials.map((item, index) => (
+          <TestimonialCard testimonial={item} key={index} />
+        ))}
+      </div>
     </div>
   );
 };
