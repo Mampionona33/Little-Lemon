@@ -133,7 +133,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-row px-20 relative ">
+      <section className="flex gap-8 flex-col items-center p-20 relative xl:flex-row xl:items-start">
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="font-bold text-3xl text-primary">Our story</h1>
           <p className="text-lg font-semibold">
@@ -150,16 +150,16 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center w-1/2 relative">
-          <div className="relative w-80 min-h-[35rem] flex  justify-center items-center">
+          <div className="xl:relative xl:w-80 min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4 w-full">
             <img
               src={mario_and_adrian_A}
               alt="mario_and_adrian_A"
-              className="w-80  object-cover items-center absolute top-40 left-40 shadow-lg rounded-lg object-right h-96"
+              className="w-80  object-cover items-center xl:absolute top-40 left-40 shadow-lg rounded-lg object-right h-96"
             />
             <img
               src={mario_and_adrian_B}
               alt="mario_and_adrian_B"
-              className="w-80 object-cover absolute top-0 right-20 shadow-md rounded-lg object-right-bottom h-96"
+              className="w-80 object-cover xl:absolute top-0 right-20 shadow-md rounded-lg object-right-bottom h-96"
             />
           </div>
         </div>
