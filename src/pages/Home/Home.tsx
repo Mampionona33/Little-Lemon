@@ -115,20 +115,37 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="flex flex-col">
         <div className="flex flex-col items-center gap-4">
           <h1 className="font-bold text-5xl text-primary ">Testimonials</h1>
           <h3 className="text-3xl text-orange-500 font-semibold">
             Read what our customers have to say
           </h3>
         </div>
+        <div className="flex flex-row justify-around gap-8 p-10">
+          {testimonials.map((item, index) => (
+            <TestimonialCard testimonial={item} key={index} />
+          ))}
+        </div>
       </section>
 
-      <div className="flex flex-row justify-around gap-8 p-10">
-        {testimonials.map((item, index) => (
-          <TestimonialCard testimonial={item} key={index} />
-        ))}
-      </div>
+      <section className="flex flex-col px-20">
+        <div className="w-1/2 flex flex-col gap-4">
+          <h1 className="font-bold text-3xl text-primary">Our story</h1>
+          <p className="text-lg font-semibold">
+            Little Lemon is owned by two Italian brothers, Mario and Adrian, who
+            moved to the United States to pursue their shared dream of owning a
+            restaurant.
+          </p>
+          <p className="text-lg font-semibold">
+            They worked hard to make their dream a reality and opened Little
+            Lemon in 1999 in Chicago. Since then, the restaurant has become a
+            local favorite for its authentic Italian cuisine and warm
+            hospitality.
+          </p>
+        </div>
+        <div></div>
+      </section>
     </div>
   );
 };
