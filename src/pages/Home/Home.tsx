@@ -61,9 +61,9 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="w-full min-h-96 bg-primary pt-28 relative">
-        <div className="flex flex-row justify-around top-28 absolute">
-          <div className="pl-28 flex flex-col gap-4  ">
+      <section className="w-full min-h-96 bg-primary relative  xl:pt-14">
+        <div className="flex flex-col justify-around gap-8 items-center p-8 md:flex-row  xl:absolute top-18 xl:items-start">
+          <div className=" flex flex-col gap-4 px-8 xl:pl-28">
             <h1 className="font-serif text-5xl text-secondary font-bold">
               Little Lemon
             </h1>
@@ -95,7 +95,7 @@ const Home = () => {
       </section>
 
       <section className="flex pt-14 flex-col ">
-        <div className="flex flex-row items-center gap-4 justify-between p-28 pb-14">
+        <div className="flex flex-col xl:flex-row items-center gap-4 justify-between p-28 pb-14">
           <h1 className="font-serif text-3xl">This weeks special!</h1>
           <div>
             <Link
@@ -111,7 +111,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="flex p-28 flex-wrap items-center justify-center gap-14 xl:justify-center xl:p-10 xl:flex-row xl:flex-nowrap">
+          <div className="flex px-28 flex-wrap items-center justify-center gap-14 xl:justify-center xl:p-10 xl:flex-row xl:flex-nowrap">
             {menuItems.map((item, index) => (
               <MenuCard item={item} key={index} />
             ))}
