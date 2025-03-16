@@ -46,7 +46,7 @@ const Home = () => {
     {
       name: "Jane Doe",
       text: "I had a great experience at Little Lemon. The food was delicious and the staff was friendly.",
-      rating: 3,
+      rating: 4,
       image: "https://picsum.photos/200/400",
     },
     {

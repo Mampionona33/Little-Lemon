@@ -63,7 +63,7 @@ const TestimonialCard = ({
         <div className="flex justify-center my-2">
           {renderStars(testimonial.rating)}
         </div>
-        <p className="text-slate-200 text-left">
+        <p className="text-slate-200 text-left block">
           <span className="font-extrabold">&#34; </span>
           {testimonial.text}
           <span className="font-extrabold"> &#34;</span>
