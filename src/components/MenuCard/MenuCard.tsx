@@ -10,7 +10,7 @@ export interface MenuItem {
 
 const MenuCard = ({ item }: { item: MenuItem }) => {
   return (
-    <div className="flex flex-col gap-4 rounded-lg bg-slate-50 shadow-md justify-between">
+    <div className="flex flex-col gap-4 rounded-lg bg-slate-50 shadow-md justify-between w-[25rem] min-h-[40rem] ">
       <img
         src={item.image}
         alt={item.title}

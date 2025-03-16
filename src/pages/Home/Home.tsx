@@ -93,6 +93,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="flex pt-14 flex-col ">
         <div className="flex flex-row items-center gap-4 justify-between p-28 pb-14">
           <h1 className="font-serif text-3xl">This weeks special!</h1>
@@ -110,13 +111,14 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="flex flex-row justify-around gap-8 p-10">
+          <div className="flex p-28 flex-wrap items-center justify-center gap-14 xl:justify-center xl:p-10 xl:flex-row xl:flex-nowrap">
             {menuItems.map((item, index) => (
               <MenuCard item={item} key={index} />
             ))}
           </div>
         </div>
       </section>
+
       <section className="flex flex-col">
         <div className="flex flex-col items-center gap-4">
           <h1 className="font-bold text-5xl text-primary ">Testimonials</h1>
