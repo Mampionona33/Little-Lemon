@@ -120,20 +120,21 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col">
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 text-center p-16">
           <h1 className="font-bold text-5xl text-primary ">Testimonials</h1>
           <h3 className="text-3xl text-orange-500 font-semibold">
             Read what our customers have to say
           </h3>
         </div>
-        <div className="flex flex-row justify-around gap-8 p-8 flex-wrap w-full">
+        <div className="flex flex-row justify-around gap-8 p-8 flex-wrap ">
           {testimonials.map((item, index) => (
             <TestimonialCard testimonial={item} key={index} />
           ))}
         </div>
       </section>
 
-      <section className="flex gap-8 flex-col items-center p-20 relative xl:flex-row xl:items-start">
+      <section className="flex flex-col xl:flex-row items-center p-8">
+        {/* Partie texte à gauche */}
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="font-bold text-3xl text-primary">Our story</h1>
           <p className="text-lg font-semibold">
@@ -149,17 +150,20 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex justify-center w-1/2 relative">
-          <div className="xl:relative xl:w-80 min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4 w-full">
+        {/* Partie images à droite */}
+        <div className="w-1/2 flex justify-center relative">
+          <div className="xl:relative w-full min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4">
+            {/* Première image */}
             <img
               src={mario_and_adrian_A}
               alt="mario_and_adrian_A"
-              className="w-80  object-cover items-center xl:absolute top-40 left-40 shadow-lg rounded-lg object-right h-96"
+              className="w-full xl:w-80 h-96 object-cover shadow-lg rounded-lg xl:absolute xl:top-0 xl:left-20"
             />
+            {/* Deuxième image */}
             <img
               src={mario_and_adrian_B}
               alt="mario_and_adrian_B"
-              className="w-80 object-cover xl:absolute top-0 right-20 shadow-md rounded-lg object-right-bottom h-96"
+              className="w-full xl:w-80 h-96 object-cover shadow-md rounded-lg xl:absolute xl:top-40 xl:right-10"
             />
           </div>
         </div>
