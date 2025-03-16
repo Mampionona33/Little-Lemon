@@ -48,8 +48,8 @@ const TestimonialCard = ({
   };
 
   return (
-    <div className="w-80 bg-primary p-4 rounded-lg shadow-lg">
-      <div className="flex justify-center">
+    <div className="w-80 bg-primary p-4 rounded-lg shadow-lg flex flex-row items-center gap-4 md:flex-col min-w-[30rem]">
+      <div className="flex justify-center min-w-[100px] min-h-[100px]">
         <img
           className="w-[100px] h-[100px] rounded-full"
           src={testimonial.image}
@@ -57,10 +57,10 @@ const TestimonialCard = ({
         />
       </div>
       <div>
-        <h2 className="text-center text-slate-50 font-semibold text-xl">
+        <h2 className="text-left md:text-center text-slate-50 font-semibold text-xl">
           {testimonial.name}
         </h2>
-        <div className="flex justify-center my-2">
+        <div className="flex jsutify-start md:justify-center my-2">
           {renderStars(testimonial.rating)}
         </div>
         <p className="text-slate-200 text-left block">

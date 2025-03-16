@@ -126,7 +126,7 @@ const Home = () => {
             Read what our customers have to say
           </h3>
         </div>
-        <div className="flex flex-row justify-around gap-8 p-10">
+        <div className="flex flex-row justify-around gap-8 p-8 flex-wrap w-full">
           {testimonials.map((item, index) => (
             <TestimonialCard testimonial={item} key={index} />
           ))}
