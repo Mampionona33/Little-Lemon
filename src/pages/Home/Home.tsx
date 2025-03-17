@@ -80,7 +80,7 @@ const Home = () => {
               hover:border-2 hover:border-secondary 
               hover:bg-transparent hover:text-secondary`}
               >
-                Reserve a table
+                Book a table
               </Link>
             </div>
           </div>

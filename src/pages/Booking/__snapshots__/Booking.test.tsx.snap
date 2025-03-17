@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Booking > should render 1`] = `
+<div>
+  <div>
+    <div>
+      Booking
+    </div>
+  </div>
+</div>
+`;
