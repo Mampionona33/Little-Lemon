@@ -88,7 +88,7 @@ const Home = () => {
             <img
               src={shuchi}
               alt="shuchi"
-              className="xl:h-96 h-[50vh] rounded-lg shadow-lg"
+              className="xl:h-96 rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -111,7 +111,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="flex px-28 flex-wrap items-center justify-center gap-14 xl:justify-center xl:p-10 xl:flex-row xl:flex-nowrap">
+          <div className="flex flex-wrap items-center justify-center gap-14 xl:justify-center p-10 xl:flex-row xl:flex-nowrap">
             {menuItems.map((item, index) => (
               <MenuCard item={item} key={index} />
             ))}
