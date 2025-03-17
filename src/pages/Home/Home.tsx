@@ -133,9 +133,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center p-8">
+      <section className="flex flex-col md:flex-row items-center md:items-start p-8">
         {/* Partie texte à gauche */}
-        <div className="md:w-1/2 flex flex-col gap-4">
+        <div className="w-1/2 flex flex-col gap-4 px-10">
           <h1 className="font-bold text-3xl text-primary">Our story</h1>
           <p className="text-lg font-semibold">
             Little Lemon is owned by two Italian brothers, Mario and Adrian, who
@@ -151,19 +151,19 @@ const Home = () => {
         </div>
 
         {/* Partie images à droite */}
-        <div className="md:w-1/2 flex justify-center relative">
-          <div className="md:relative w-full md:min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4">
+        <div className="w-1/2 flex justify-center">
+          <div className="xl:relative md:just w-full xl:min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4">
             {/* Première image */}
             <img
               src={mario_and_adrian_A}
               alt="mario_and_adrian_A"
-              className="w-full md:w-72 h-96 object-cover shadow-lg rounded-lg md:absolute md:top-0 md:left-20"
+              className="w-full xl:w-72 h-96 object-cover shadow-lg rounded-lg xl:relative xl:top-0 xl:left-0 xl:z-10"
             />
             {/* Deuxième image */}
             <img
               src={mario_and_adrian_B}
               alt="mario_and_adrian_B"
-              className="w-full md:w-72 h-96 object-cover shadow-md rounded-lg xl:absolute xl:top-40 xl:right-10"
+              className="w-full xl:w-72 h-96 object-cover shadow-xl rounded-lg xl:absolute xl:top-40 xl:right-20"
             />
           </div>
         </div>
