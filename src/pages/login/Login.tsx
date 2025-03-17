@@ -20,7 +20,6 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<LoginFormInputs> = (data) => {
     console.log("Form data:", data);
-    // Ajoutez ici la logique pour traiter la connexion (ex: appel API)
   };
 
   return (
@@ -74,7 +73,7 @@ const Login = () => {
         {/* Bouton de soumission */}
         <button
           type="submit"
-          className="w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
+          className="font-semibold w-full bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary hover:text-primary transitionn"
         >
           Login
         </button>
