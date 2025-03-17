@@ -1,4 +1,34 @@
+import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+// Définir le schéma de validation avec Zod
+const orderSchema = z.object({
+  fullName: z.string().min(1, "Full name is required"),
+  deliveryAddress: z.string().min(1, "Delivery address is required"),
+  phoneNumber: z.string().min(10, "Phone number must be at least 10 digits"),
+  deliveryInstructions: z.string().optional(),
+});
+
+// Inférer le type du formulaire à partir du schéma Zod
+type OrderFormInputs = z.infer<typeof orderSchema>;
+
 const OrderOnline = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<OrderFormInputs>({
+    resolver: zodResolver(orderSchema), // Intégrer Zod avec React Hook Form
+  });
+
+  // Fonction appelée lors de la soumission du formulaire
+  const onSubmit: SubmitHandler<OrderFormInputs> = (data) => {
+    console.log("Form data:", data);
+    // Ajoutez ici la logique pour traiter la commande (ex: appel API)
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center text-green-700 mb-8">
@@ -10,41 +40,74 @@ const OrderOnline = () => {
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
           Delivery Information
         </h2>
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Champ Full Name */}
           <div>
             <label className="block text-gray-700 mb-2">Full Name</label>
             <input
               type="text"
               placeholder="John Doe"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+              {...register("fullName")}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900"
             />
+            {errors.fullName && (
+              <p className="mt-2 text-sm text-red-600">
+                {errors.fullName.message}
+              </p>
+            )}
           </div>
+
+          {/* Champ Delivery Address */}
           <div>
             <label className="block text-gray-700 mb-2">Delivery Address</label>
             <input
               type="text"
               placeholder="123 Main St, City, Country"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+              {...register("deliveryAddress")}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900"
             />
+            {errors.deliveryAddress && (
+              <p className="mt-2 text-sm text-red-600">
+                {errors.deliveryAddress.message}
+              </p>
+            )}
           </div>
+
+          {/* Champ Phone Number */}
           <div>
             <label className="block text-gray-700 mb-2">Phone Number</label>
             <input
               type="tel"
               placeholder="+123 456 7890"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+              {...register("phoneNumber")}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900"
             />
+            {errors.phoneNumber && (
+              <p className="mt-2 text-sm text-red-600">
+                {errors.phoneNumber.message}
+              </p>
+            )}
           </div>
+
+          {/* Champ Delivery Instructions */}
           <div>
             <label className="block text-gray-700 mb-2">
               Delivery Instructions
             </label>
             <textarea
               placeholder="e.g., Leave at the front door"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+              {...register("deliveryInstructions")}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900"
               rows={3}
             />
+            {errors.deliveryInstructions && (
+              <p className="mt-2 text-sm text-red-600">
+                {errors.deliveryInstructions.message}
+              </p>
+            )}
           </div>
+
+          {/* Bouton de soumission */}
           <button
             type="submit"
             className="font-semibold w-full bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary hover:text-primary transition"

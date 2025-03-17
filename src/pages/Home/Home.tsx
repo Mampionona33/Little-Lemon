@@ -99,7 +99,7 @@ const Home = () => {
           <h1 className="font-serif text-3xl">This weeks special!</h1>
           <div>
             <Link
-              to="/menu"
+              to="/order-online"
               className={`
               bg-secondary text-primary py-2 px-4 
               rounded-md mt-4 cursor-pointer font-semibold 
