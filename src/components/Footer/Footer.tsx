@@ -12,27 +12,27 @@ const Footer = () => {
     {
       title: "About us",
       items: [
-        { label: "Our Company", href: "/our-company" },
-        { label: "Suppliers", href: "/suppliers" },
-        { label: "Careers", href: "/careers" },
-        { label: "Newsletter", href: "/newsletter" },
+        { label: "Our Company", href: "/" },
+        { label: "Suppliers", href: "/" },
+        { label: "Careers", href: "/" },
+        { label: "Newsletter", href: "/" },
       ],
     },
     {
       title: "Customer Service",
       items: [
-        { label: "Contact Us", href: "/contact-us" },
-        { label: "Contacts", href: "/contacts" },
-        { label: "+1(123)456-7890", href: "/phone" },
-        { label: "info@littlelemon.com", href: "/email" },
+        { label: "Contact Us", href: "/" },
+        { label: "Contacts", href: "/" },
+        { label: "+1(123)456-7890", href: "/" },
+        { label: "info@littlelemon.com", href: "/" },
       ],
     },
     {
       title: "Availability",
       items: [
-        { label: "Tues-Thurs: 12pm-10pm", href: "/tues-thurs" },
-        { label: "Fri-Sun: 12pm-10pm", href: "/fri-sun" },
-        { label: "Mon: Closed", href: "/mon-closed" },
+        { label: "Tues-Thurs: 12pm-10pm", href: "/" },
+        { label: "Fri-Sun: 12pm-10pm", href: "/" },
+        { label: "Mon: Closed", href: "/" },
       ],
     },
     {
