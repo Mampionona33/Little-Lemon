@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import MainLayout from "../pages/Layout/MainLayout/MainLayout";
 import Booking from "../pages/Booking/Booking";
+import OrderOnline from "../pages/OrderOnline/OrderOnline";
 
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const appRouter = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/booking" element={<Booking />} />
+      <Route path="/order-online" element={<OrderOnline />} />
     </Route>
   ),
   {

@@ -49,7 +49,7 @@ const Booking = () => {
                 type="date"
                 id="date"
                 {...register("date")}
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
               />
               {errors.date && (
                 <span className="text-red-500 text-sm">
@@ -66,7 +66,7 @@ const Booking = () => {
                 type="time"
                 id="time"
                 {...register("time")}
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
               />
               {errors.time && (
                 <span className="text-red-500 text-sm">
@@ -87,7 +87,7 @@ const Booking = () => {
                 id="guests_number"
                 {...register("guests_number", { valueAsNumber: true })}
                 min="1"
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
                 placeholder="1"
               />
               {errors.guests_number && (
@@ -108,7 +108,7 @@ const Booking = () => {
                 id="instruction"
                 {...register("instruction")}
                 rows={3}
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
                 placeholder="Extra information..."
               />
             </div>
@@ -130,7 +130,7 @@ const Booking = () => {
                 type="text"
                 id="name"
                 {...register("name")}
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
                 placeholder="John Doe"
               />
               {errors.name && (
@@ -148,7 +148,7 @@ const Booking = () => {
                 type="email"
                 id="email"
                 {...register("email")}
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
                 placeholder="example@email.com"
               />
               {errors.email && (
@@ -166,7 +166,7 @@ const Booking = () => {
                 type="tel"
                 id="phone"
                 {...register("phone")}
-                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-900 focus:outline-none"
                 placeholder="1234567890"
               />
               {errors.phone && (
@@ -184,7 +184,7 @@ const Booking = () => {
             type="submit"
             className="bg-primary text-white py-2 px-6 rounded-lg font-semibold 
               hover:bg-secondary hover:text-primary transition duration-300 shadow-md 
-              focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              focus:ring-2 focus:ring-green-900 focus:outline-none"
           >
             Book Now
           </button>
