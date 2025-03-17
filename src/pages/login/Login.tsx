@@ -14,6 +14,7 @@ const Login = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<LoginFormInputs>({
     resolver: zodResolver(loginSchema),
@@ -21,7 +22,16 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<LoginFormInputs> = (data) => {
     console.log("Form data:", data);
-    toast.success("Login successful");
+    toast.success("Login successful", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    reset();
   };
 
   return (

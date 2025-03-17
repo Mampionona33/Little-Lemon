@@ -17,7 +17,8 @@ type OrderFormInputs = z.infer<typeof orderSchema>;
 const OrderOnline = () => {
   const {
     register,
-    handleSubmit,reset,
+    handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<OrderFormInputs>({
     resolver: zodResolver(orderSchema), // Intégrer Zod avec React Hook Form
@@ -26,14 +27,14 @@ const OrderOnline = () => {
   // Fonction appelée lors de la soumission du formulaire
   const onSubmit: SubmitHandler<OrderFormInputs> = (data) => {
     console.log("Form data:", data);
-    toast.success("Order placed successfully!",{
-         position: "bottom-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
+    toast.success("Order placed successfully!", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
     });
     reset();
   };
