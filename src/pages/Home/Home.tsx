@@ -60,7 +60,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="">
+    <div className="items-center xl:flex-col xl:flex">
       <section className="w-full min-h-96 bg-primary relative  xl:pt-14">
         <div className="flex flex-col justify-around gap-8 items-center p-8 md:flex-row  xl:absolute top-18 xl:items-start w-full">
           <div className=" flex flex-col gap-4 px-8 xl:pl-28">
@@ -94,8 +94,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex xl:pt-14 flex-col ">
-        <div className="flex flex-col xl:flex-row items-center gap-4 justify-between p-20 pb-14">
+      <section className="flex xl:pt-14 flex-col items-center">
+        <div className="flex  xl:w-full flex-col xl:flex-row items-center gap-4 justify-between py-20">
           <h1 className="font-serif text-3xl">This weeks special!</h1>
           <div>
             <Link
@@ -126,14 +126,14 @@ const Home = () => {
             Read what our customers have to say
           </h3>
         </div>
-        <div className="flex flex-row justify-around gap-8 p-8 flex-wrap ">
+        <div className="flex flex-row justify-center gap-14 p-8 flex-wrap ">
           {testimonials.map((item, index) => (
             <TestimonialCard testimonial={item} key={index} />
           ))}
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center md:items-start p-8">
+      <section className="flex flex-col md:flex-row items-center md:items-start p-8 xl:w-3/4 ">
         {/* Partie texte à gauche */}
         <div className="w-full md:w-1/2 flex flex-col gap-4 px-10">
           <h1 className="font-bold text-3xl text-primary">Our story</h1>
