@@ -1,8 +1,37 @@
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// Définir le schéma de validation avec Zod
+const formSchema = z.object({
+  date: z.string().min(1, "Date is required"),
+  time: z.string().min(1, "Time is required"),
+  guests_number: z.number().min(1, "Number of guests must be at least 1"),
+  instruction: z.string().optional(),
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().min(1, "Phone number is required"),
+});
+
+type FormData = z.infer<typeof formSchema>;
+
 const Booking = () => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen p-6 bg-gray-100">
       <form
-        method="post"
+        onSubmit={handleSubmit(onSubmit)}
         className="w-full max-w-lg bg-white shadow-lg rounded-xl p-6 space-y-6"
       >
         {/* Section Booking */}
@@ -18,10 +47,15 @@ const Booking = () => {
               </label>
               <input
                 type="date"
-                name="date"
                 id="date"
+                {...register("date")}
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
               />
+              {errors.date && (
+                <span className="text-red-500 text-sm">
+                  {errors.date.message}
+                </span>
+              )}
             </div>
 
             <div className="flex flex-col">
@@ -30,10 +64,15 @@ const Booking = () => {
               </label>
               <input
                 type="time"
-                name="time"
                 id="time"
+                {...register("time")}
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
               />
+              {errors.time && (
+                <span className="text-red-500 text-sm">
+                  {errors.time.message}
+                </span>
+              )}
             </div>
 
             <div className="flex flex-col">
@@ -45,12 +84,17 @@ const Booking = () => {
               </label>
               <input
                 type="number"
-                name="guests_number"
                 id="guests_number"
+                {...register("guests_number", { valueAsNumber: true })}
                 min="1"
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 placeholder="1"
               />
+              {errors.guests_number && (
+                <span className="text-red-500 text-sm">
+                  {errors.guests_number.message}
+                </span>
+              )}
             </div>
 
             <div className="flex flex-col">
@@ -61,8 +105,8 @@ const Booking = () => {
                 Special Requests
               </label>
               <textarea
-                name="instruction"
                 id="instruction"
+                {...register("instruction")}
                 rows={3}
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 placeholder="Extra information..."
@@ -84,11 +128,16 @@ const Booking = () => {
               </label>
               <input
                 type="text"
-                name="name"
                 id="name"
+                {...register("name")}
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 placeholder="John Doe"
               />
+              {errors.name && (
+                <span className="text-red-500 text-sm">
+                  {errors.name.message}
+                </span>
+              )}
             </div>
 
             <div className="flex flex-col">
@@ -97,11 +146,16 @@ const Booking = () => {
               </label>
               <input
                 type="email"
-                name="email"
                 id="email"
+                {...register("email")}
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 placeholder="example@email.com"
               />
+              {errors.email && (
+                <span className="text-red-500 text-sm">
+                  {errors.email.message}
+                </span>
+              )}
             </div>
 
             <div className="flex flex-col">
@@ -110,11 +164,16 @@ const Booking = () => {
               </label>
               <input
                 type="tel"
-                name="phone"
                 id="phone"
+                {...register("phone")}
                 className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 placeholder="1234567890"
               />
+              {errors.phone && (
+                <span className="text-red-500 text-sm">
+                  {errors.phone.message}
+                </span>
+              )}
             </div>
           </div>
         </fieldset>
@@ -122,6 +181,7 @@ const Booking = () => {
         {/* Bouton de soumission */}
         <div className="flex justify-center">
           <button
+            type="submit"
             className="bg-primary text-white py-2 px-6 rounded-lg font-semibold 
               hover:bg-secondary hover:text-primary transition duration-300 shadow-md 
               focus:ring-2 focus:ring-blue-400 focus:outline-none"
