@@ -1,6 +1,6 @@
 const Booking = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen p-6 bg-gray-50">
+    <div className="flex justify-center items-center min-h-screen p-6 bg-gray-100">
       <form
         method="post"
         className="w-full max-w-lg bg-white shadow-lg rounded-xl p-6 space-y-6"
