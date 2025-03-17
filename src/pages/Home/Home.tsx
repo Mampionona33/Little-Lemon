@@ -62,7 +62,7 @@ const Home = () => {
   return (
     <div className="">
       <section className="w-full min-h-96 bg-primary relative  xl:pt-14">
-        <div className="flex flex-col justify-around gap-8 items-center p-8 md:flex-row  xl:absolute top-18 xl:items-start">
+        <div className="flex flex-col justify-around gap-8 items-center p-8 md:flex-row  xl:absolute top-18 xl:items-start w-full">
           <div className=" flex flex-col gap-4 px-8 xl:pl-28">
             <h1 className="font-serif text-5xl text-secondary font-bold">
               Little Lemon
@@ -135,7 +135,7 @@ const Home = () => {
 
       <section className="flex flex-col md:flex-row items-center md:items-start p-8">
         {/* Partie texte à gauche */}
-        <div className="w-1/2 flex flex-col gap-4 px-10">
+        <div className="w-full md:w-1/2 flex flex-col gap-4 px-10">
           <h1 className="font-bold text-3xl text-primary">Our story</h1>
           <p className="text-lg font-semibold">
             Little Lemon is owned by two Italian brothers, Mario and Adrian, who
@@ -151,7 +151,7 @@ const Home = () => {
         </div>
 
         {/* Partie images à droite */}
-        <div className="w-1/2 flex justify-center">
+        <div className="md:w-1/2 flex justify-center w-full">
           <div className="xl:relative md:just w-full xl:min-h-[35rem] flex justify-center items-center flex-wrap gap-8 p-4">
             {/* Première image */}
             <img
