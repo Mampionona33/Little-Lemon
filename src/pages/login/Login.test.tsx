@@ -1,10 +1,10 @@
 import { describe } from "vitest";
 import { render } from "../../../tests/test-utilities";
-import Booking from "./Booking";
+import Login from "./Login";
 
-describe("Booking", () => {
+describe("Login", () => {
   it("should render", () => {
-    const { container } = render(<Booking />);
+    const { container } = render(<Login />);
     expect(container).toBeInTheDocument();
   });
 });

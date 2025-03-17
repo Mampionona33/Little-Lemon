@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "react-toastify";
 
 // Définir le schéma de validation avec Zod
 const formSchema = z.object({
@@ -19,6 +20,7 @@ const Booking = () => {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -26,6 +28,16 @@ const Booking = () => {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+    toast.success("Booking successful!",{
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+    reset();
   };
 
   return (

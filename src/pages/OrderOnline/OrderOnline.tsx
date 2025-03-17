@@ -1,7 +1,7 @@
-import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { toast } from "react-toastify";
 
 // Définir le schéma de validation avec Zod
 const orderSchema = z.object({
@@ -17,7 +17,7 @@ type OrderFormInputs = z.infer<typeof orderSchema>;
 const OrderOnline = () => {
   const {
     register,
-    handleSubmit,
+    handleSubmit,reset,
     formState: { errors },
   } = useForm<OrderFormInputs>({
     resolver: zodResolver(orderSchema), // Intégrer Zod avec React Hook Form
@@ -26,7 +26,16 @@ const OrderOnline = () => {
   // Fonction appelée lors de la soumission du formulaire
   const onSubmit: SubmitHandler<OrderFormInputs> = (data) => {
     console.log("Form data:", data);
-    // Ajoutez ici la logique pour traiter la commande (ex: appel API)
+    toast.success("Order placed successfully!",{
+         position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+    });
+    reset();
   };
 
   return (

@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { toast } from "react-toastify";
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email address").min(1, "Email is required"),
@@ -20,6 +21,7 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<LoginFormInputs> = (data) => {
     console.log("Form data:", data);
+    toast.success("Login successful");
   };
 
   return (
